@@ -316,6 +316,7 @@ nav li:hover {
   height: 110px;
   border: 1px solid black;
 }
+/* Я зробила кола та квадрати як заглушки для фото, щоб клієнт міг змінити їх пізніше. */
 
 .access-link {
   border: 1px solid black;
@@ -327,15 +328,44 @@ nav li:hover {
   background-color: rgb(206 66 21);
 }
 
-/* .recomendation-wrapper::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  background-color: grey;
-} */
-
 /* Section 4 */
+.worked-with {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 300px;
+  text-align: center;
+  background-color: rgb(245 249 237);
+  min-height: 800px;
+  color: rgb(27 57 35);
+}
+
+.worked-with h2 {
+  margin-bottom: 10px;
+}
+
+.worked-with p {
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.people {
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.each-person {
+  margin-top: 20px;
+  align-self: center;
+}
+
+.each-person p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
 .grey-background {
   width: 100px;
   height: 100px;
