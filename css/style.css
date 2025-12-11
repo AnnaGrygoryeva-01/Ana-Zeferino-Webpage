@@ -5,6 +5,20 @@
 body {
   width: 100vw;
   height: 100vh;
+  font-family: sans-serif;
+}
+
+h2 {
+  justify-self: start;
+  color: rgb(27 57 35);
+  font-size: 3.7rem;
+  font-family: serif;
+  font-weight: 1000;
+  margin-bottom: 40px;
+}
+
+strong {
+  font-weight: bold;
 }
 
 /* Header */
@@ -16,7 +30,6 @@ header {
   align-items: center;
   background-color: rgb(245 239 234);
   border-bottom: 1px solid rgba(167, 180, 150, 0.864);
-  font-family: sans-serif;
   font-weight: 100;
   font-size: 1.2rem;
   color: rgb(27 57 35);
@@ -31,11 +44,10 @@ nav ul {
   gap: 40px;
   padding-left: 4px;
   border-left: 5px solid rgb(138 139 73);
-  
 }
 
 nav li:hover {
-    color: rgb(206 66 21);
+  color: rgb(206 66 21);
 }
 
 /* Section 1 */
@@ -47,7 +59,6 @@ nav li:hover {
   width: 100%;
   min-height: 600px;
   position: relative;
-  
 }
 
 .leaf-1 {
@@ -65,10 +76,12 @@ nav li:hover {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  align-items: center;
   width: 40%;
   max-width: 500px;
   margin-right: 20px;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 90px;
 }
 
 .name {
@@ -84,12 +97,16 @@ nav li:hover {
   color: rgb(49 83 59);
   font-size: 1.7rem;
   margin-bottom: 35px;
-  font-family: sans-serif;
   font-weight: 100;
 }
 
 .social-links {
-    align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .social-links a {
@@ -108,17 +125,217 @@ nav li:hover {
 }
 
 .social-links a:hover {
+  color: rgb(14 39 21);
 }
 
 .hero-photo-1 {
   z-index: 1;
   height: 85%;
   width: auto;
-  object-fit: none
-  margin-bottom: -5px;
+}
+
+/* Section 2 */
+.services {
+  padding: 80px 250px;
+  background-color: rgb(245 249 237);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 30px;
+  grid-template-areas:
+    "header    header"
+    "service-1 service-2"
+    "service-3 service-3";
+}
+
+.services h2 {
+  grid-area: header;
+}
+
+.service-1,
+.service-2,
+.service-3 {
+  background-color: rgb(49 83 59);
+  color: rgb(245 249 237);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 2px solid black;
+}
+
+.service-1 {
+  grid-area: service-1;
+}
+
+.service-2 {
+  grid-area: service-2;
+}
+
+.service-3 {
+  grid-area: service-3;
+}
+
+.services h3 {
+  font-family: serif;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.services p {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: rgb(204 218 178);
+  font-weight: 100;
+}
+
+.green-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(179 180 118);
+  border: none;
+  font-weight: bold;
+  color: #1a2e1a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  border: 1px solid white;
+}
+
+.green-btn:hover {
+  background-color: rgb(245 249 237);
+}
+
+.consultation-link {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgb(206 66 21);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid rgb(206 66 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.consultation-link:hover {
+  background-color: rgb(180, 50, 10);
+}
+
+.service-2 .consultation-link:first-of-type {
+  background-color: transparent;
+  border: 1px solid rgb(180, 50, 10);
+}
+
+.consultation-link .fa-brands {
+  color: rgb(49 83 59);
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-2 .consultation-link:first-of-type:hover {
+  background-color: rgb(34, 58, 41);
 }
 
 /* Section 3 */
+
+.recomendations {
+  background-color: rgb(179 180 118);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 30px;
+  grid-template-areas:
+    "recomendations-header recomendations-header"
+    "recomendation-1 recomendation-2"
+    "recomendation-3 recomendation-4";
+
+  min-height: 600px;
+  padding: 100px 350px 100px 250px;
+}
+
+.recomendation-1,
+.recomendation-2,
+.recomendation-3,
+.recomendation-4 {
+}
+
+.recomendations h2 {
+  grid-area: recomendations-header;
+}
+
+.recomendation-1 {
+  grid-area: recomendation-1;
+}
+
+.recomendation-2 {
+  grid-area: recomendation-2;
+}
+
+.recomendation-3 {
+  grid-area: recomendation-3;
+}
+
+.recomendation-4 {
+  grid-area: recomendation-4;
+}
+
+.recomendation-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.recomendation-wrapper p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+.white-square {
+  width: 110px;
+  height: 110px;
+  border: 1px solid black;
+}
+
+.access-link {
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
+  padding: 10px 40px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: rgb(206 66 21);
+}
+
+/* .recomendation-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: grey;
+} */
+
+/* Section 4 */
 .grey-background {
   width: 100px;
   height: 100px;
