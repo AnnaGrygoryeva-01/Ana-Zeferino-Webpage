@@ -40,7 +40,7 @@ header {
   color: rgb(27 57 35);
 }
 
-.logo {
+header logo {
   padding-right: 200px;
 }
 
@@ -53,6 +53,10 @@ nav ul {
 
 nav li:hover {
   color: rgb(206 66 21);
+}
+
+.menu-btn {
+  display: none;
 }
 
 /* Section 1 */
@@ -71,7 +75,6 @@ nav li:hover {
   left: -16px;
   bottom: -55px;
   height: 90%;
-  z-index: 0;
   pointer-events: none;
 }
 
@@ -134,7 +137,6 @@ nav li:hover {
 }
 
 .hero-photo-1 {
-  z-index: 1;
   height: 85%;
   width: auto;
 }
@@ -262,7 +264,6 @@ nav li:hover {
 }
 
 /* Section 3 */
-
 .recomendations {
   background-color: rgb(179 180 118);
   display: grid;
@@ -315,6 +316,7 @@ nav li:hover {
   height: 110px;
   border: 1px solid black;
 }
+
 /* Я зробила кола та квадрати як заглушки для фото, щоб клієнт міг змінити їх пізніше. */
 
 .access-link {
@@ -325,13 +327,18 @@ nav li:hover {
   font-size: 0.8rem;
   font-weight: 500;
   background-color: rgb(206 66 21);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  margin-top: 10px;
 }
 
 /* Section 4 */
 .worked-with {
   display: flex;
   flex-direction: column;
-  padding: 100px 300px;
+  padding: 100px 50px;
   text-align: center;
   background-color: rgb(245 249 237);
   min-height: 800px;
@@ -352,7 +359,9 @@ nav li:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .each-person {
@@ -372,7 +381,6 @@ nav li:hover {
 }
 
 /* Section 5 */
-
 .about-hero {
   background-color: rgb(49, 83, 59);
   color: rgb(204, 218, 178);
@@ -430,6 +438,7 @@ nav li:hover {
   left: 15%;
   width: 100px;
 }
+
 .review-container {
   display: flex;
   align-items: center;
@@ -444,7 +453,9 @@ nav li:hover {
   font-size: 1.2rem;
   line-height: 1.4;
   font-weight: 100;
+  z-index: 1;
 }
+
 .signature {
   text-align: right;
   font-weight: bold;
@@ -459,6 +470,7 @@ nav li:hover {
   color: #d67a55;
   cursor: pointer;
   padding: 10px;
+  z-index: 1;
 }
 
 .leaf-2 {
@@ -466,6 +478,7 @@ nav li:hover {
   bottom: -70px;
   right: 0;
   width: 400px;
+  z-index: 0;
 }
 
 /* Footer */
@@ -475,6 +488,7 @@ footer {
   padding: 40px 200px;
   min-height: 200px;
   justify-content: center;
+  background-color: rgb(245 249 237);
 }
 
 .footer-wrapper {
@@ -483,19 +497,199 @@ footer {
   padding-bottom: 40px;
 }
 
-.logo {
+.footer-wrapper logo {
   font-size: 2.7rem;
   font-weight: 100;
   color: #1a2e1a;
 }
 
 .footer-wrapper a {
-  color: white;
+  color: rgb(245 249 237);
   font-size: 1.7rem;
 }
 
-.last {
+.last-element {
   align-self: center;
   font-weight: 100;
-  color: rgb(49 83 59);
+  color: #1b3923;
+}
+
+/* Media */
+@media (max-width: 750px) {
+  /* Header */
+  header {
+    justify-content: space-between;
+    padding: 0px 40px;
+    font-size: 1.6rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block !important;
+    font-size: 2rem;
+    color: rgb(27, 57, 35);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .menu-btn:hover {
+    color: #d67a55;
+  }
+
+  /* Section 1 */
+  .hero {
+    min-height: auto;
+    height: auto;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .leaf-1 {
+    display: none;
+  }
+
+  .hero-container {
+    width: 55%;
+    padding-left: 20px;
+    margin-right: 0;
+    align-self: center;
+  }
+
+  .name {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .hero-photo-1 {
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+    align-self: flex-end;
+  }
+
+  .social-links a {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    margin-right: 8px;
+  }
+
+  /* Section 2 */
+  .services {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "service-1"
+      "service-2"
+      "service-3";
+    padding: 60px 25px;
+  }
+
+  .services h3 {
+    font-size: 1.8rem;
+  }
+
+  /* Section 3 */
+  .recomendations {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "recomendations-header"
+      "recomendation-1"
+      "recomendation-2"
+      "recomendation-3"
+      "recomendation-4";
+    padding: 60px 100px;
+    gap: 40px;
+  }
+
+  /* Section 5 */
+  .about-hero {
+    display: block;
+    position: relative;
+    padding: 140px 30px 50px 30px;
+    min-height: auto;
+  }
+
+  .hero-photo-2 {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    height: 250px;
+    margin: 0;
+    object-position: top;
+  }
+
+  .text-content {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .about-hero h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  /* Section 6 */
+  .leaf-2 {
+    display: none;
+  }
+
+  .reviews {
+    padding: 80px 10px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 20px;
+  }
+
+  .footer-wrapper logo {
+    font-size: 1.7rem;
+  }
+}
+/* -------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  /* Section 2 */
+  .services {
+    padding: 80px 50px;
+    gap: 20px;
+  }
+
+  /* Section 3 */
+  .recomendations {
+    padding: 100px 50px;
+    gap: 20px;
+  }
+
+  /* Section 5 */
+  .about-hero {
+    padding: 80px 30px 50px 30px;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .hero-photo-2 {
+    width: 45%;
+    max-width: 350px;
+    margin-top: -100px;
+    margin-right: 0;
+  }
+
+  .text-content {
+    flex: 1;
+    margin-top: 0;
+  }
 }
