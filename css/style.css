@@ -3,8 +3,9 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
   font-family: sans-serif;
 }
 
@@ -15,11 +16,11 @@ body::selection {
 
 h2 {
   justify-self: start;
-  color: rgb(27 57 35);
-  font-size: 3.7rem;
-  font-family: serif;
-  font-weight: 1000;
   margin-bottom: 40px;
+  font-family: serif;
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: rgb(27, 57, 35);
 }
 
 strong {
@@ -29,18 +30,18 @@ strong {
 /* Header */
 header {
   display: flex;
-  min-height: 100px;
-  width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(245 239 234);
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(245, 239, 234);
   border-bottom: 1px solid rgba(167, 180, 150, 0.864);
-  font-weight: 100;
   font-size: 1.2rem;
-  color: rgb(27 57 35);
+  font-weight: 100;
+  color: rgb(27, 57, 35);
 }
 
-header logo {
+header .logo {
   padding-right: 200px;
 }
 
@@ -48,11 +49,11 @@ nav ul {
   display: flex;
   gap: 40px;
   padding-left: 4px;
-  border-left: 5px solid rgb(138 139 73);
+  border-left: 5px solid rgb(138, 139, 73);
 }
 
 nav li:hover {
-  color: rgb(206 66 21);
+  color: rgb(206, 66, 21);
 }
 
 .menu-btn {
@@ -61,21 +62,21 @@ nav li:hover {
 
 /* Section 1 */
 .hero {
-  background-color: rgb(204 218 178);
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 100%;
   min-height: 600px;
-  position: relative;
+  background-color: rgb(204, 218, 178);
 }
 
 .leaf-1 {
+  pointer-events: none;
   position: absolute;
   left: -16px;
   bottom: -55px;
   height: 90%;
-  pointer-events: none;
 }
 
 .hero-container {
@@ -84,36 +85,36 @@ nav li:hover {
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  align-items: flex-start;
   width: 40%;
   max-width: 500px;
-  margin-right: 20px;
-  align-items: flex-start;
-  text-align: left;
   padding-left: 90px;
+  margin-right: 20px;
+  text-align: left;
 }
 
 .name {
-  color: rgb(14 39 21);
+  margin: 0 0 15px 0;
   font-family: serif;
   font-size: 6rem;
-  line-height: 0.9;
-  margin: 0 0 15px 0;
   font-weight: bold;
+  line-height: 0.9;
+  color: rgb(14, 39, 21);
 }
 
 .hero-description {
-  color: rgb(49 83 59);
-  font-size: 1.7rem;
   margin-bottom: 35px;
+  font-size: 1.7rem;
   font-weight: 100;
+  color: rgb(49, 83, 59);
 }
 
 .social-links {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -123,36 +124,35 @@ nav li:hover {
   align-items: center;
   width: 45px;
   height: 45px;
-  background-color: rgb(206 66 21);
-  color: rgb(204 218 178);
-  border-radius: 50%;
   margin-right: 12px;
+  background-color: rgb(206, 66, 21);
+  border-radius: 50%;
   font-size: 1.2rem;
   text-decoration: none;
+  color: rgb(204, 218, 178);
   transition: transform 0.2s;
 }
 
 .social-links a:hover {
-  color: rgb(14 39 21);
+  color: rgb(14, 39, 21);
 }
 
 .hero-photo-1 {
-  height: 85%;
   width: auto;
+  height: 85%;
 }
 
 /* Section 2 */
 .services {
-  padding: 80px 250px;
-  background-color: rgb(245 249 237);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 30px;
   grid-template-areas:
     "header    header"
     "service-1 service-2"
     "service-3 service-3";
+  gap: 30px;
+  padding: 80px 250px;
+  background-color: rgb(245, 249, 237);
 }
 
 .services h2 {
@@ -162,78 +162,74 @@ nav li:hover {
 .service-1,
 .service-2,
 .service-3 {
-  background-color: rgb(49 83 59);
-  color: rgb(245 249 237);
-  padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 50px;
+  background-color: rgb(49, 83, 59);
   border: 2px solid black;
+  color: rgb(245, 249, 237);
 }
 
 .service-1 {
   grid-area: service-1;
 }
-
 .service-2 {
   grid-area: service-2;
 }
-
 .service-3 {
   grid-area: service-3;
 }
 
 .services h3 {
+  margin-top: 0;
   font-family: serif;
   font-size: 2.3rem;
-  line-height: 1.1;
-  margin-top: 0;
   font-weight: bold;
+  line-height: 1.1;
 }
 
 .services p {
+  margin-bottom: 10px;
   font-family: sans-serif;
   font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: rgb(204 218 178);
   font-weight: 100;
+  line-height: 1.6;
+  color: rgb(204, 218, 178);
 }
 
 .green-btn {
-  width: 100%;
-  padding: 15px;
-  background-color: rgb(179 180 118);
-  border: none;
-  font-weight: bold;
-  color: #1a2e1a;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(179, 180, 118);
   border: 1px solid white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1a2e1a;
+  cursor: pointer;
 }
 
 .green-btn:hover {
-  background-color: rgb(245 249 237);
+  background-color: rgb(245, 249, 237);
 }
 
 .consultation-link {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 15px;
-  background-color: rgb(206 66 21);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  border: 1px solid rgb(206 66 21);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(206, 66, 21);
+  border: 1px solid rgb(206, 66, 21);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
   transition: background-color 0.3s;
 }
 
@@ -246,55 +242,49 @@ nav li:hover {
   border: 1px solid rgb(180, 50, 10);
 }
 
-.consultation-link .fa-brands {
-  color: rgb(49 83 59);
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 50%;
-  align-self: center;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .service-2 .consultation-link:first-of-type:hover {
   background-color: rgb(34, 58, 41);
 }
 
+.consultation-link .fa-brands {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: rgb(49, 83, 59);
+}
+
 /* Section 3 */
 .recomendations {
-  background-color: rgb(179 180 118);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 30px;
   grid-template-areas:
     "recomendations-header recomendations-header"
     "recomendation-1 recomendation-2"
     "recomendation-3 recomendation-4";
-
+  gap: 30px;
   min-height: 600px;
   padding: 100px 350px 100px 250px;
+  background-color: rgb(179, 180, 118);
 }
 
 .recomendations h2 {
   grid-area: recomendations-header;
 }
-
 .recomendation-1 {
   grid-area: recomendation-1;
 }
-
 .recomendation-2 {
   grid-area: recomendation-2;
 }
-
 .recomendation-3 {
   grid-area: recomendation-3;
 }
-
 .recomendation-4 {
   grid-area: recomendation-4;
 }
@@ -305,9 +295,9 @@ nav li:hover {
 }
 
 .recomendation-wrapper p {
-  font-size: 1.3rem;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-size: 1.3rem;
   font-weight: 100;
 }
 
@@ -316,33 +306,32 @@ nav li:hover {
   height: 110px;
   border: 1px solid black;
 }
-
 /* Я зробила кола та квадрати як заглушки для фото, щоб клієнт міг змінити їх пізніше. */
 
 .access-link {
-  border: 1px solid black;
-  text-decoration: none;
-  color: white;
-  padding: 10px 40px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  background-color: rgb(206 66 21);
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  white-space: nowrap;
   margin-top: 10px;
+  padding: 10px 40px;
+  background-color: rgb(206, 66, 21);
+  border: 1px solid black;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
 }
 
 /* Section 4 */
 .worked-with {
   display: flex;
   flex-direction: column;
-  padding: 100px 50px;
-  text-align: center;
-  background-color: rgb(245 249 237);
   min-height: 800px;
-  color: rgb(27 57 35);
+  padding: 100px 50px;
+  background-color: rgb(245, 249, 237);
+  text-align: center;
+  color: rgb(27, 57, 35);
 }
 
 .worked-with h2 {
@@ -350,23 +339,23 @@ nav li:hover {
 }
 
 .worked-with p {
-  font-weight: 100;
   margin-bottom: 15px;
+  font-weight: 100;
 }
 
 .people {
-  gap: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  gap: 25px;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .each-person {
-  margin-top: 20px;
   align-self: center;
+  margin-top: 20px;
 }
 
 .each-person p {
@@ -382,14 +371,14 @@ nav li:hover {
 
 /* Section 5 */
 .about-hero {
-  background-color: rgb(49, 83, 59);
-  color: rgb(204, 218, 178);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  padding: 80px 150px 0px 150px;
   min-height: 650px;
+  padding: 80px 150px 0px 150px;
+  background-color: rgb(49, 83, 59);
+  color: rgb(204, 218, 178);
 }
 
 .text-content {
@@ -399,11 +388,11 @@ nav li:hover {
 }
 
 .about-hero h2 {
-  color: rgb(245, 249, 237);
+  margin-bottom: 20px;
   font-family: sans-serif;
   font-size: 5.5rem;
   line-height: 1;
-  margin-bottom: 20px;
+  color: rgb(245, 249, 237);
 }
 
 .about-hero p {
@@ -413,23 +402,23 @@ nav li:hover {
 }
 
 .hero-photo-2 {
-  margin-top: -170px;
-  margin-right: -90px;
+  display: block;
   width: 500px;
   height: auto;
+  margin-top: -170px;
+  margin-right: -90px;
   object-fit: cover;
-  display: block;
 }
 
 /* Section 6 */
 .reviews {
-  background-color: rgb(204, 218, 178);
   position: relative;
-  padding: 100px 50px;
-  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 600px;
+  padding: 100px 50px;
+  background-color: rgb(204, 218, 178);
 }
 
 .quote {
@@ -440,55 +429,55 @@ nav li:hover {
 }
 
 .review-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   max-width: 1000px;
-  position: relative;
 }
 
 .review-content {
-  color: rgb(14 39 21);
-  font-size: 1.2rem;
-  line-height: 1.4;
-  font-weight: 100;
   z-index: 1;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.4;
+  color: rgb(14, 39, 21);
 }
 
 .signature {
-  text-align: right;
-  font-weight: bold;
   margin-top: 20px;
+  text-align: right;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .nav-btn {
+  z-index: 1;
+  padding: 10px;
   background: none;
   border: none;
   font-size: 24px;
   color: #d67a55;
   cursor: pointer;
-  padding: 10px;
-  z-index: 1;
 }
 
 .leaf-2 {
+  z-index: 0;
   position: absolute;
   bottom: -70px;
   right: 0;
   width: 400px;
-  z-index: 0;
 }
 
 /* Footer */
 footer {
   display: flex;
   flex-direction: column;
-  padding: 40px 200px;
-  min-height: 200px;
   justify-content: center;
-  background-color: rgb(245 249 237);
+  min-height: 200px;
+  padding: 40px 200px;
+  background-color: rgb(245, 249, 237);
 }
 
 .footer-wrapper {
@@ -497,15 +486,15 @@ footer {
   padding-bottom: 40px;
 }
 
-.footer-wrapper logo {
+.footer-wrapper .logo {
   font-size: 2.7rem;
   font-weight: 100;
   color: #1a2e1a;
 }
 
 .footer-wrapper a {
-  color: rgb(245 249 237);
   font-size: 1.7rem;
+  color: rgb(245, 249, 237);
 }
 
 .last-element {
@@ -514,7 +503,43 @@ footer {
   color: #1b3923;
 }
 
-/* Media */
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1100px) {
+  /* Section 2 */
+  .services {
+    gap: 20px;
+    padding: 80px 50px;
+  }
+
+  /* Section 3 */
+  .recomendations {
+    gap: 20px;
+    padding: 100px 50px;
+  }
+
+  /* Section 5 */
+  .about-hero {
+    align-items: center;
+    gap: 30px;
+    padding: 80px 30px 50px 30px;
+  }
+
+  .hero-photo-2 {
+    width: 45%;
+    max-width: 350px;
+    margin-top: -260px;
+    margin-right: 20px;
+  }
+
+  .text-content {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+/* Mobile */
 @media (max-width: 750px) {
   /* Header */
   header {
@@ -529,11 +554,11 @@ footer {
 
   .menu-btn {
     display: block !important;
+    background-color: transparent;
+    border: none;
     font-size: 2rem;
     color: rgb(27, 57, 35);
     cursor: pointer;
-    border: none;
-    background-color: transparent;
   }
 
   .menu-btn:hover {
@@ -542,9 +567,9 @@ footer {
 
   /* Section 1 */
   .hero {
+    align-items: center;
     min-height: auto;
     height: auto;
-    align-items: center;
     padding-bottom: 0;
   }
 
@@ -553,35 +578,35 @@ footer {
   }
 
   .hero-container {
+    align-self: center;
     width: 55%;
     padding-left: 20px;
     margin-right: 0;
-    align-self: center;
   }
 
   .name {
-    font-size: 3rem;
     margin-bottom: 10px;
+    font-size: 3rem;
   }
 
   .hero-description {
+    margin-bottom: 15px;
     font-size: 0.9rem;
     line-height: 1.3;
-    margin-bottom: 15px;
   }
 
   .hero-photo-1 {
+    align-self: flex-end;
     width: 35%;
     height: auto;
     object-fit: contain;
-    align-self: flex-end;
   }
 
   .social-links a {
     width: 32px;
     height: 32px;
-    font-size: 0.9rem;
     margin-right: 8px;
+    font-size: 0.9rem;
   }
 
   /* Section 2 */
@@ -608,25 +633,27 @@ footer {
       "recomendation-2"
       "recomendation-3"
       "recomendation-4";
-    padding: 60px 100px;
     gap: 40px;
+    padding: 60px 100px;
   }
 
   /* Section 5 */
   .about-hero {
-    display: block;
     position: relative;
-    padding: 140px 30px 50px 30px;
+    display: block;
     min-height: auto;
+    padding: 130px 30px 50px 30px;
   }
 
   .hero-photo-2 {
     position: absolute;
-    top: 20px;
-    right: 40px;
-    height: 250px;
+    top: -120px;
+    right: 0;
+    width: 50%;
+    max-width: 250px;
+    height: 220px;
     margin: 0;
-    object-position: top;
+    object-fit: cover;
   }
 
   .text-content {
@@ -635,10 +662,9 @@ footer {
   }
 
   .about-hero h2 {
+    margin-bottom: 20px;
     font-size: 3.5rem;
     line-height: 1;
-    margin-bottom: 20px;
-    max-width: 100%;
   }
 
   /* Section 6 */
@@ -655,41 +681,7 @@ footer {
     padding: 20px 20px;
   }
 
-  .footer-wrapper logo {
+  .footer-wrapper .logo {
     font-size: 1.7rem;
-  }
-}
-/* -------------------------------------------------------------------- */
-
-@media (max-width: 1100px) {
-  /* Section 2 */
-  .services {
-    padding: 80px 50px;
-    gap: 20px;
-  }
-
-  /* Section 3 */
-  .recomendations {
-    padding: 100px 50px;
-    gap: 20px;
-  }
-
-  /* Section 5 */
-  .about-hero {
-    padding: 80px 30px 50px 30px;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .hero-photo-2 {
-    width: 45%;
-    max-width: 350px;
-    margin-top: -100px;
-    margin-right: 0;
-  }
-
-  .text-content {
-    flex: 1;
-    margin-top: 0;
   }
 }
