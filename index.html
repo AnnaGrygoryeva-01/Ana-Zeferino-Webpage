@@ -17,17 +17,18 @@
   <body>
     <!-- Header -->
     <header>
-      <p class="logo">
+      <a href="#" class="logo">
         <span style="font-weight: bold">ana</span>
         <br />
         zeferino
-      </p>
+      </a>
       <nav>
         <ul>
-          <li>Serviços</li>
-          <li>Eu indico</li>
-          <li>Sobre</li>
-          <li>Depoimentos</li>
+          <!-- The # points to the ID of the section -->
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#recomendations">Eu indico</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#reviews">Depoimentos</a></li>
         </ul>
       </nav>
       <button class="menu-btn">
@@ -37,7 +38,6 @@
 
     <!-- Section 1: Hero -->
     <section class="hero">
-      <img class="leaf-1" src="./assets/images/leaf-1.png" alt="leaf" />
       <div class="hero-container">
         <h1 class="name">
           Ana <br />
@@ -64,72 +64,74 @@
     </section>
 
     <!-- Section 2: Services -->
-    <section class="services">
-      <h2>Serviços</h2>
-      <article class="service-1">
-        <h3>Consultoria individual</h3>
-        <p>
-          A consultoria é um serviço individualizado que segue uma estrutura com
-          foco em diagnosticar e encaminhar um plano de ação diante um
-          problema/questão trazida pelo cliente. O propósito da consultoria é te
-          orientar de forma personalizada no assunto em que você precisa de
-          ajuda.
-        </p>
-        <button class="green-btn">
-          Assuntos que atendo nas consultorias
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <button class="green-btn">
-          Como funciona a minha consultoria
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <a class="consultation-link" href="#"
-          ><i class="fa-solid fa-check"></i>QUERO A CONSULTORIA</a
-        >
-      </article>
+    <section class="services-background" id="services">
+      <div class="services">
+        <h2>Serviços</h2>
+        <article class="service-1">
+          <h3>Consultoria individual</h3>
+          <p>
+            A consultoria é um serviço individualizado que segue uma estrutura
+            com foco em diagnosticar e encaminhar um plano de ação diante um
+            problema/questão trazida pelo cliente. O propósito da consultoria é
+            te orientar de forma personalizada no assunto em que você precisa de
+            ajuda.
+          </p>
+          <button class="green-btn">
+            Assuntos que atendo nas consultorias
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <button class="green-btn">
+            Como funciona a minha consultoria
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <a class="consultation-link" href="#"
+            ><i class="fa-solid fa-check"></i>QUERO A CONSULTORIA</a
+          >
+        </article>
 
-      <article class="service-2">
-        <h3>Landing Page</h3>
-        <p>
-          Precisa de uma página de captura para sua isca digital, uma página de
-          lista de espera para infoproduto ou uma página de venda para divulgar
-          seu curso?
-        </p>
-        <p style="font-weight: bold">
-          Então agora você encontrou quem pode fazer isso pra você.
-        </p>
-        <button class="green-btn">
-          Como funciona o processo
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <a class="consultation-link" href="#"
-          ><i class="fa-brands fa-behance"></i>ACESSE MEU PORTFÓLIO</a
-        >
-        <a class="consultation-link" href="#"
-          ><i class="fa-solid fa-check"></i>QUERO A CONSULTORIA</a
-        >
-      </article>
+        <article class="service-2">
+          <h3>Landing Page</h3>
+          <p>
+            Precisa de uma página de captura para sua isca digital, uma página
+            de lista de espera para infoproduto ou uma página de venda para
+            divulgar seu curso?
+          </p>
+          <p style="font-weight: bold">
+            Então agora você encontrou quem pode fazer isso pra você.
+          </p>
+          <button class="green-btn">
+            Como funciona o processo
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <a class="consultation-link" href="#"
+            ><i class="fa-brands fa-behance"></i>ACESSE MEU PORTFÓLIO</a
+          >
+          <a class="consultation-link" href="#"
+            ><i class="fa-solid fa-check"></i>QUERO A CONSULTORIA</a
+          >
+        </article>
 
-      <article class="service-3">
-        <h3>Treinamento in company | Gestão de lançamento</h3>
-        <p>(parceria com Ana Laura Lobo)</p>
-        <p>
-          O treinamento in company ou mentoria, é ideal para você que já tem um
-          gestor, ou é seu próprio gestor, e quer aprimorar seu conhecimento e
-          alinhar os processos do seu lançamento.
-        </p>
-        <button class="green-btn">
-          Como funciona a minha consultoria
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <a class="consultation-link" href="#"
-          ><i class="fa-solid fa-check"></i>QUERO A CONSULTORIA</a
-        >
-      </article>
+        <article class="service-3">
+          <h3>Treinamento in company | Gestão de lançamento</h3>
+          <p>(parceria com Ana Laura Lobo)</p>
+          <p>
+            O treinamento in company ou mentoria, é ideal para você que já tem
+            um gestor, ou é seu próprio gestor, e quer aprimorar seu
+            conhecimento e alinhar os processos do seu lançamento.
+          </p>
+          <button class="green-btn">
+            Como funciona a minha consultoria
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <a class="consultation-link" href="#"
+            ><i class="fa-solid fa-check"></i>QUERO A CONSULTORIA</a
+          >
+        </article>
+      </div>
     </section>
 
     <!-- Section 3: Recomendations -->
-    <section class="recomendations">
+    <section class="recomendations" id="recomendations">
       <h2>Eu indico</h2>
       <article class="recomendation-wrapper recomendation-1">
         <img
@@ -280,7 +282,7 @@
     </section>
 
     <!-- Section 5: About Ana -->
-    <section class="about-hero">
+    <section class="about-hero" id="about">
       <div class="text-content">
         <h2>
           ana <br />
@@ -301,8 +303,7 @@
     </section>
 
     <!-- Section 6: Reviews -->
-    <section class="reviews">
-      <img class="quote" src="./assets/images/brackets.png" alt="quotes" />
+    <section class="reviews" id="reviews">
       <div class="review-container">
         <button class="nav-btn">
           <i class="fa-solid fa-chevron-left"></i>
@@ -331,7 +332,6 @@
           <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
-      <img class="leaf-2" src="./assets/images/leaf-2.png" alt="leaf" />
     </section>
 
     <!-- Footer -->
