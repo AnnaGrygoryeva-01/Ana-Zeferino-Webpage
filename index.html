@@ -55,16 +55,22 @@
           </li>
         </ul>
       </div>
-      <img
-        class="hero-photo-1"
-        src="./assets/images/Photo-1.png"
-        alt="Ana Zeferino"
-      />
+      <picture>
+        <source
+          media="(max-width: 750px)"
+          srcset="./assets/images/photo-1-alternative.png"
+        />
+        <img
+          class="hero-photo-1"
+          src="./assets/images/Photo-1.png"
+          alt="Ana Zeferino"
+        />
+      </picture>
     </section>
 
     <!-- Section 2: Services -->
     <section class="services-background" id="services">
-      <div class="services">
+      <div class="services width">
         <h2>Serviços</h2>
         <article class="service-1">
           <h3>Consultoria individual</h3>
@@ -130,7 +136,8 @@
     </section>
 
     <!-- Section 3: Recomendations -->
-    <section class="recomendations" id="recomendations">
+    <section class="recomendations-background" id="recomendations">
+      <div class="recomendations width">
       <h2>Eu indico</h2>
       <article class="recomendation-wrapper recomendation-1">
         <img
@@ -187,6 +194,7 @@
           >
         </div>
       </article>
+      </div>
     </section>
 
     <!-- Section 4: Worked With -->
@@ -294,12 +302,15 @@
           e-commerce. Hoje também faço parte da equipe de gestão Ana Laura Lobo.
         </p>
       </div>
+      <picture>
+        <source media="(max-width: 750px)" srcset="./assets/images/photo-2-alternative.png">
       <img
         class="hero-photo-2"
         src="./assets/images/Photo-2.png"
         alt="Ana Zeferino"
       />
     </section>
+    </picture>
 
     <!-- Section 6: Reviews -->
     <section class="reviews" id="reviews">
